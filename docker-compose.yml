@@ -2,8 +2,6 @@ version: "3.8"
 services:
   raid_api:
     container_name: raid_alert_proxy
-    networks:
-      - mynetwork
     build:
       dockerfile: Dockerfile
     ports:
