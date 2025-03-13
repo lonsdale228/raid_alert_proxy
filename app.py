@@ -30,6 +30,7 @@ def update_data():
                     "error": "Failed to fetch data",
                     "status": response.status_code
                 }
+            print(response.text)
         except Exception as e:
             data = {"error": str(e)}
         time.sleep(8)
