@@ -2,6 +2,8 @@ version: "3.8"
 services:
   raid_api:
     container_name: raid_alert_proxy
+    networks:
+      - shared_network
     build:
       dockerfile: Dockerfile
     env_file:
@@ -9,3 +11,8 @@ services:
     restart: unless-stopped
     ports:
       - "5000:5000"
+
+
+networks:
+  shared_network:
+    external: true
